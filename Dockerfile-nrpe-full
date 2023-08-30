@@ -21,6 +21,8 @@ RUN apt-get update \
         monitoring-plugins-common \
         monitoring-plugins-standard \
         nagios-plugins-contrib \
+        mariadb-client \
+        postgresql-client \
         curl \
         file \
         liburi-perl \
