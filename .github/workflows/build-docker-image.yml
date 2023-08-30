@@ -31,11 +31,15 @@ jobs:
           file: Dockerfile-nrpe-plain
           platforms: linux/amd64
           push: true
-          tags: tradel/nrpe-server:plain
+          tags: |
+            tradel/nrpe-server:plain
+            ghcr.io/tradel/nrpe-server:plain
       - name: Build full
         uses: docker/build-push-action@v4
         with:
           file: Dockerfile-nrpe-full
           platforms: linux/amd64
           push: true
-          tags: tradel/nrpe-server:full
+          tags: | 
+            tradel/nrpe-server:full
+            ghcr.io/tradel/nrpe-server:full
