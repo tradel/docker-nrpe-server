@@ -25,9 +25,14 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      # - name: Build
-      #   run: docker build . --file Dockerfile-nrpe-full --tag tradel/nrpe-server:full
-      - name: Build and push
+      - name: Build plain
+        uses: docker/build-push-action@v4
+        with:
+          file: Dockerfile-nrpe-plain
+          platforms: linux/amd64
+          push: true
+          tags: tradel/nrpe-server:plain
+      - name: Build full
         uses: docker/build-push-action@v4
         with:
           file: Dockerfile-nrpe-full
