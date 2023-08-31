@@ -23,6 +23,7 @@ RUN apt-get update \
         nagios-plugins-contrib \
         mariadb-client \
         postgresql-client \
+        dnsutils \
         curl \
         file \
         liburi-perl \
